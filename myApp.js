@@ -14,4 +14,11 @@ app.get("/", (req, res) => {
   res.sendFile(absolutePath);
 });
 
+/*
+Creates a json file and sends it to the browser
+*/
+app.get("/json", (req, res) => {
+  res.json({ message: "Hello json" });
+});
+
 module.exports = app;
